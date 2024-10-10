@@ -1,0 +1,14 @@
+---
+import '@/styles/globals.css';
+import Layout from '../layouts/Layout.astro';
+import { Contact9 } from '@/components/Contact';
+import { Contact24} from '@/components/Info';
+
+---
+
+<Layout title="Skyarc - Kontakt">
+    <main class="md:ly-20 py-28">
+       <Contact9 client:load/>
+	   <Contact24/
+    </main>
+</Layout>

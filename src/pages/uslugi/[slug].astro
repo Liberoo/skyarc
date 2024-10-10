@@ -1,0 +1,38 @@
+---
+// src/pages/blog/[slug].astro
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+ import logoSecondary from '../../img/logo-secondary.png';
+ import {Cta} from '../../components/Cta.tsx';
+ import {Gallery} from '../../components/Gallery.tsx';
+ import {Header36}	from '../../components/HeaderService.tsx';
+interface Props {
+  post: CollectionEntry<'uslugi'>;
+}
+ 
+export async function getStaticPaths() {
+  const servicePosts = await getCollection('uslugi');
+  return servicePosts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+ 
+<Layout title={post.data.title}>
+<Header36 heading={post.data.title}/>
+
+	<Cta >
+		<Image
+		src={logoSecondary}
+		alt="A description of my image."
+		width={100}
+		/>
+	  </Cta>
+	  <Gallery client:load/>
+
+</Layout>
