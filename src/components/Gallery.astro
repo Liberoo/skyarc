@@ -1,0 +1,27 @@
+---
+const { heading, description, images } = Astro.props;
+
+import { Image } from "astro:assets";
+console.log(images);
+import { getImage } from "astro:assets";
+const myImage = import.meta.glob('../../../img/uslugi/konserwacja-dachow/1.jpg');
+console.log('kamil',myImage);
+const imageProps = await getImage({ src: myImage, width: 800 });
+
+---
+<img {...imageProps} alt="Opis obrazu" class="class-do-stylizacji" />
+
+<section id="relume" class="px-[5%] py-16 md:py-24 lg:py-28">
+  <div class="container">
+    <div class="rb-12 mb-12 text-center md:mb-18 lg:mb-20">
+      <h2 class="rb-5 mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+        {heading}
+      </h2>
+      <p class="md:text-md">{description}</p>
+    </div>
+<Image src="../../img/uslugi/konserwacja-dachow/1.jpg" alt="kamil" width={50} height={50}/>
+    <div class="gap-x-8 md:columns-2">
+
+    </div>
+  </div>
+</section>

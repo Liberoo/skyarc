@@ -1,0 +1,52 @@
+---
+title: Konserwacja dachów
+subtitle: Mycie, impregnacja, malowanie
+description: Dbając o estetykę, trwałość i bezpieczeństwo Twojego dachu, oferujemy kompleksowe usługi mycia, malowania i impregnacji dachów z blachy oraz dachówek ceramicznych i betonowych.
+---
+import img10 from "../../img/uslugi/konserwacja-dachow/1.jpg"
+import img1 from "@/img/uslugi/konserwacja-dachow/1.jpg";
+import img2 from "@/img/uslugi/konserwacja-dachow/2.jpg";
+import img3 from "@/img/uslugi/konserwacja-dachow/3.jpg"; 
+import img4 from "@/img/uslugi/konserwacja-dachow/4.jpg"; 
+import img5 from "@/img/uslugi/konserwacja-dachow/5.jpg";
+import img6 from "@/img/uslugi/konserwacja-dachow/6.jpg"; 
+import img7 from "@/img/uslugi/konserwacja-dachow/7.jpg"; 
+import { Gallery8 } from "../../components/Gallery8.tsx";
+import { Header36 } from '../../components/HeaderService.tsx';
+import {Image} from 'astro:assets';
+
+<Header36 
+  heading={frontmatter.title}
+  subheading={frontmatter.subtitle}
+  description={frontmatter.description}>
+<Image src={img6} alt="A bird sitting on a nest of eggs." />
+  </Header36>
+<div className="container px-[5%] py-16 md:py-24 lg:py-28 text-xl border-b-2 border-primary">
+	<div className="flex flex-col md:flex-row gap-x-20">
+	<h2 className="text-5xl mb-3 min-w-64 block">Nasze usługi obejmują trzy etapy:</h2>
+		<div>
+			<ul className="md:list-disc flex gap-y-5 flex-col">
+			<li><strong>Mycie</strong>: Usuwamy zabrudzenia i osady, przygotowując dach do dalszych prac.</li>
+			<li><strong>Malowanie</strong>: Równomiernie pokrywamy dach wybranym kolorem, poprawiając estetykę i ochronę.</li>
+			<li><strong>Impregnacja</strong>: Zabezpieczamy dachówkę przed wilgocią i zabrudzeniami, przedłużając jej trwałość.</li>
+			</ul>
+			<p>Nasze usługi to gwarancja długotrwałej ochrony przed działaniem czynników atmosferycznych. Korzystamy z nowoczesnych technologii i sprawdzonych preparatów, które skutecznie zabezpieczają dach.</p>
+			<p class="mt-5"><strong>Zainwestuj w dach, który będzie wyglądał świetnie przez lata!</strong></p>
+		</div>
+	</div>
+</div>
+
+<Gallery8 client:load
+  heading="Galeria Naszych Realizacji"
+  description="Zobacz nasze realizacje i poznaj jakość naszych usług."
+  images={[
+    {  src: img1.src, alt: "Descriptive Alt Text for image 1" },
+    {  src: img2.src, alt: "Descriptive Alt Text for image 2" },
+    {  src: img3.src, alt: "Descriptive Alt Text for image 3" },
+    {  src: img4.src, alt: "Descriptive Alt Text for image 4" },
+    {  src: img5.src, alt: "Descriptive Alt Text for image 5" },
+    {  src: img6.src, alt: "Descriptive Alt Text for image 6" },
+    {  src: img7.src, alt: "Descriptive Alt Text for image 7" }
+  ]}
+/>
+

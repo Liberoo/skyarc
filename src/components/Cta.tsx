@@ -31,8 +31,8 @@ export const Cta = (props: CtaProps) => {
 };
 
 export const CtaDefaults: CtaProps = {
-  heading: "Medium length heading goes here",
+  heading: "Zaplanuj realizację projektu z naszymi specjalistami!  ",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+    "Skontaktuj się z nami i uzyskaj darmową wycenę",
   buttons: [{ title: "Kontakt" }],
 };

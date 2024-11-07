@@ -1,0 +1,49 @@
+---
+title: "Zabezpieczenia na ptaki"
+subtitle: "Montaż systemów anty ptak oraz siatek "
+description: "Chronimy Twoją przestrzeń przed ptakami, stosując nowoczesne i bezpieczne metody.  "
+cover: https://placehold.co/600x400
+---
+
+import img1 from "@/img/uslugi/siatki-i-zabezpieczenia-na-ptaki/1.jpg";
+import img2 from "@/img/uslugi/siatki-i-zabezpieczenia-na-ptaki/2.jpg";
+
+
+import { Gallery8 } from "../../components/Gallery8.tsx";
+import { Header36 } from '../../components/HeaderService.tsx';
+import {Image} from 'astro:assets';
+
+<Header36 
+  heading={frontmatter.title}
+  subheading={frontmatter.subtitle}
+  description={frontmatter.description}>
+<Image src={img1} alt="A bird sitting on a nest of eggs."  height={900} />
+  </Header36>
+<div className="container px-[5%] py-16 md:py-24 lg:py-28 text-xl border-b-2 border-primary">
+	<div className="flex flex-col md:flex-row gap-x-20">
+  	<h2 className="text-5xl mb-3 min-w-64 block">Chronimy Twoją przestrzeń przed ptakami, stosując nowoczesne i bezpieczne metody. Oferujemy:</h2>
+		<div>
+			<ul className="md:list-disc flex gap-y-5 flex-col">
+			<li>Montaż siatek odstraszających balkonowych i tarasowych</li>
+			<li>Montaż kolców przeciw ptakom </li>
+			</ul>
+
+	
+		</div>
+	</div>
+</div>
+
+<Gallery8 client:load
+  heading="Galeria Naszych Realizacji"
+  description="Zobacz nasze realizacje i poznaj jakość naszych usług."
+  images={[
+	{  src: img2.src, alt: "Descriptive Alt Text for image 2" },
+    {  src: img1.src, alt: "Descriptive Alt Text for image 1" },
+	{  src: img2.src, alt: "Descriptive Alt Text for image 2" },
+    {  src: img1.src, alt: "Descriptive Alt Text for image 1" },
+
+
+
+
+  ]}
+/>

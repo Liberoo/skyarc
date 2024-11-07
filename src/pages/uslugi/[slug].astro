@@ -6,8 +6,8 @@ import type { CollectionEntry } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
  import logoSecondary from '../../img/logo-secondary.png';
  import {Cta} from '../../components/Cta.tsx';
- import {Gallery} from '../../components/Gallery.tsx';
- import {Header36}	from '../../components/HeaderService.tsx';
+ import {Services} from '../../components/Services.tsx';
+
 interface Props {
   post: CollectionEntry<'uslugi'>;
 }
@@ -23,8 +23,9 @@ const { post } = Astro.props;
 const { Content } = await post.render();
 ---
  
-<Layout title={post.data.title}>
-<Header36 heading={post.data.title}/>
+<Layout title={post.data.title} >
+
+<Content />
 
 	<Cta >
 		<Image
@@ -33,6 +34,6 @@ const { Content } = await post.render();
 		width={100}
 		/>
 	  </Cta>
-	  <Gallery client:load/>
+<Services heading="Sprawdź inne usługi"/>
 
 </Layout>

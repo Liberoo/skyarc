@@ -11,6 +11,31 @@ import {
 import type { CarouselApi } from "@relume_io/relume-ui";
 import clsx from "clsx";
 
+import img1 from "@/img/uslugi/konserwacja-dachow/1.jpg";
+import img2 from "@/img/uslugi/konserwacja-dachow/2.jpg";
+import img3 from "@/img/uslugi/konserwacja-dachow/3.jpg"; 
+import img4 from "@/img/uslugi/konserwacja-dachow/4.jpg"; 
+import img5 from "@/img/uslugi/konserwacja-dachow/5.jpg";
+import img6 from "@/img/uslugi/konserwacja-dachow/6.jpg"; 
+import img7 from "@/img/uslugi/konserwacja-dachow/7.jpg"; 
+import img8 from "@/img/uslugi/mycie-elewacji/1.jpg";
+import img9 from "@/img/uslugi/mycie-elewacji/2.jpg";
+import img10 from "@/img/uslugi/mycie-elewacji/3.jpg"; 
+import img11 from "@/img/uslugi/mycie-elewacji/4.jpg"; 
+import img12 from "@/img/uslugi/mycie-elewacji/5.jpg";
+import img13 from "@/img/uslugi/mycie-elewacji/6.jpg"; 
+import img14 from "@/img/uslugi/obsluga-nieruchomosci/1.jpg";
+import img15 from "@/img/uslugi/obsluga-nieruchomosci/2.jpg";
+import img16 from "@/img/uslugi/obsluga-nieruchomosci/3.jpg"; 
+import img17 from "@/img/uslugi/obsluga-nieruchomosci/4.jpg"; 
+import img18 from "@/img/uslugi/obsluga-nieruchomosci/5.jpg";
+import img19 from "@/img/uslugi/obsluga-nieruchomosci/6.jpg"; 
+import img20 from "@/img/uslugi/obsluga-nieruchomosci/7.jpg";
+import img21 from "@/img/uslugi/obsluga-nieruchomosci/8.jpg"; 
+import img22 from "@/img/uslugi/odsniezanie/1.jpg";
+import img23 from "@/img/uslugi/odsniezanie/2.jpg"; 
+import img24 from "@/img/uslugi/siatki-i-zabezpieczenia-na-ptaki/1.jpg";
+import img25 from "@/img/uslugi/siatki-i-zabezpieczenia-na-ptaki/2.jpg"; 
 type ImageProps = {
   src: string;
   alt?: string;
@@ -97,23 +122,84 @@ export const Gallery = (props: GalleryProps) => {
 
 export const GalleryDefaults: GalleryProps = {
   heading: "Nasze Realizacje",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  description: "Skontaktuj się z nami i uzyskaj darmową wycenę",
   images: [
     {
-      src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
+      src: img1.src,
       alt: "Relume placeholder image 1",
     },
     {
-      src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
-      alt: "Relume placeholder image 2",
-    },
-    {
-      src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
-      alt: "Relume placeholder image 3",
-    },
-    {
-      src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
-      alt: "Relume placeholder image 4",
+      src: img2.src,
+      alt: "Relume placeholder image 1",
+    },   {
+      src: img3.src,
+      alt: "Relume placeholder image 1",
+    },   {
+      src: img4.src,
+      alt: "Relume placeholder image 1",
+    },   {
+      src: img5.src,
+      alt: "Relume placeholder image 1",
+    },   {
+      src: img6.src,
+      alt: "Relume placeholder image 1",
+    },   {
+      src: img7.src,
+      alt: "Relume placeholder image 1",
+    },   {
+      src: img8.src,
+      alt: "Relume placeholder image 1",
+    },   {
+      src: img9.src,
+      alt: "Relume placeholder image 1",
+    },   {
+      src: img10.src,
+      alt: "Relume placeholder image 1",
+    },   {
+      src: img11.src,
+      alt: "Relume placeholder image 1",
+    },   {
+      src: img12.src,
+      alt: "Relume placeholder image 1",
+    },   {
+      src: img13.src,
+      alt: "Relume placeholder image 1",
+    },   {
+      src: img14.src,
+      alt: "Relume placeholder image 1",
+    },   {
+      src: img15.src,
+      alt: "Relume placeholder image 1",
+    },   {
+      src: img16.src,
+      alt: "Relume placeholder image 1",
+    },   {
+      src: img17.src,
+      alt: "Relume placeholder image 1",
+    },   {
+      src: img18.src,
+      alt: "Relume placeholder image 1",
+    },   {
+      src: img19.src,
+      alt: "Relume placeholder image 1",
+    },   {
+      src: img20.src,
+      alt: "Relume placeholder image 1",
+    },   {
+      src: img21.src,
+      alt: "Relume placeholder image 1",
+    },   {
+      src: img22.src,
+      alt: "Relume placeholder image 1",
+    },   {
+      src: img23.src,
+      alt: "Relume placeholder image 1",
+    },   {
+      src: img24.src,
+      alt: "Relume placeholder image 1",
+    },   {
+      src: img25.src,
+      alt: "Relume placeholder image 1",
     },
   ],
 };

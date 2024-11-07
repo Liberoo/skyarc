@@ -2,10 +2,7 @@ import React from 'react';
 import { Heading, Text } from "@relume_io/relume-ui";
 import Link from "./Link";
 
-type ImageProps = {
-  src: string;
-  alt?: string;
-};
+
 
 type ButtonProps = {
   text: string;
@@ -16,7 +13,8 @@ type Props = {
   heading: string;
   description: string;
   buttons: ButtonProps[];
-  image: ImageProps;
+  children: React.ReactNode;
+
 };
 
 export type HeaderProps = React.ComponentPropsWithoutRef<"section"> & Partial<Props>;
@@ -26,13 +24,13 @@ export const Header = (props: HeaderProps) => {
     heading,
     description,
     buttons,
-    image,
+   children
   } = {
     ...props,
   } as Props;
 
   return (
-    <section id="relume" className="relative px-[5%]">
+    <section id="relume" className="relative px-[5%] overflow-hidden">
       <div className="container">
         <div className="flex max-h-[60rem] min-h-svh items-center py-16 md:py-24 lg:py-28">
           <div className="max-w-md text-text-alternative">
@@ -48,9 +46,9 @@ export const Header = (props: HeaderProps) => {
           </div>
         </div>
       </div>
-      <div className="absolute inset-0 -z-10">
-        <img src={image.src} className="size-full object-cover" alt={image.alt} />
-        <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 -z-10 ">
+       {children}
+        <div className="absolute inset-0 bg-black/50 "  />
       </div>
     </section>
   );

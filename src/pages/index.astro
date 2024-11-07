@@ -9,27 +9,30 @@ import {Gallery} from '../components/Gallery.tsx';
 import { RxChevronRight } from "react-icons/rx";
 import Image from 'astro/components/Image.astro';
 import logoSecondary from '../img/logo-secondary.png';
+import headerImage from '../img/uslugi/mycie-elewacji/1.jpg';
 ---
 
 <Layout title="Skyarc - Usługi Aplinistyczne">
     <main>
         <Header
-          image={{
-            src: "https://placehold.co/900x400",
-            alt: "Custom Image Alt Text"
-          }}
           heading="Usługi Aplinistyczne"
-          description={`Masz do wykonania prace na wysokościach? 
-            Chcesz, aby twój projekt został wykonany dobrze, szybko i bezpiecznie? 
-            Postaw na specjalistów, którzy staną na wysokości zadania.`}
+          description={`Nasza specjaliści zrealizują Twój projekt szybko, sprawnie i bezpiecznie na terenie Krakowa oraz małopolski. Zapoznaj się z zakresem naszych usług. Dzięki nowoczesnym technikom i doświadczeniu zapewniamy najwyższą jakość wykonania. Skontaktuj się z nami i umów na wycenę. `}
           buttons={[
             { text: "Kontakt", href: "/kontakt" },
             { text: "Oferta", href: "/#oferta" }
           ]}
-        />
+        >
+          <Image
+            src={headerImage}
+            alt="A description of my image."
+            width={1920}
+            class="object-cover h-full w-full"
+          />
+        </Header>
         <About
         heading= "Skyarc"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed odio morbi quis commodo odio aenean sed. Malesuada pellentesque elit eget gravida cum. Ut lectus arcu bibendum at varius vel pharetra vel turpis. Tempus imperdiet nulla malesuada pellentesque elit eget. Massa enim nec dui nunc mattis enim. Nulla facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum. Sed nisi lacus sed viverra. Nibh sit amet commodo nulla facilisi nullam vehicula. Augue lacus viverra vitae congue. Mi proin sed libero enim. Senectus et netus et malesuada fames ac turpis egestas integer." />
+        description={'Wybierając nasze usługi, zyskujesz pewność, że prace zostaną wykonane terminowo, precyzyjnie i z dbałością o każdy detal. Nasz zespół to doświadczeni fachowcy, którzy podchodzą do każdego zlecenia z pełnym zaangażowaniem.  Korzystamy z nowoczesnych narzędzi i sprawdzonych materiałów, co pozwala nam oferować usługi na najwyższym poziomie.'}
+ />
         <Services/>
         <Cta>
           <Image

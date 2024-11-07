@@ -1,0 +1,51 @@
+---
+title: "Odśnieżanie "
+subtitle: "Odśnieżanie Dachów i Usuwanie Sopli"
+description: "W zimie zapewniamy bezpieczeństwo, oferując profesjonalne usługi odśnieżania dachów i usuwania sopli lodowych. "
+cover: https://placehold.co/600x400
+---
+
+import img1 from "@/img/uslugi/odsniezanie/1.jpg";
+import img2 from "@/img/uslugi/odsniezanie/2.jpg";
+
+
+import { Gallery8 } from "../../components/Gallery8.tsx";
+import { Header36 } from '../../components/HeaderService.tsx';
+import {Image} from 'astro:assets';
+
+<Header36 
+  heading={frontmatter.title}
+  subheading={frontmatter.subtitle}
+  description={frontmatter.description}>
+<Image src={img1} alt="A bird sitting on a nest of eggs."  height={900} />
+  </Header36>
+<div className="container px-[5%] py-16 md:py-24 lg:py-28 text-xl border-b-2 border-primary">
+	<div className="flex flex-col md:flex-row gap-x-20">
+  	<h2 className="text-5xl mb-3 min-w-64 block">Oferujemy profesjonalne usługi naprawcze, które obejmują:</h2>
+		<div>
+			<ul className="md:list-disc flex gap-y-5 flex-col">
+			<li>Uzupełnianie ubytków w termoizolacji</li>
+			<li>Odtwarzanie powierzchni elewacji </li>
+			<li>Wymiana kratek wentylacyjnych uszkodzonych przez ptaki</li>
+			</ul>
+			<p>Każde zlecenie realizujemy indywidualnie, dobierając techniki i materiały odpowiednie do konkretnego przypadku. 
+Naszym celem jest przywrócenie Twojej elewacji pełnej funkcjonalności i estetyki.</p>
+	
+		</div>
+	</div>
+</div>
+
+<Gallery8 client:load
+  heading="Galeria Naszych Realizacji"
+  description="Zobacz nasze realizacje i poznaj jakość naszych usług."
+  images={[
+	{  src: img2.src, alt: "Descriptive Alt Text for image 2" },
+    {  src: img1.src, alt: "Descriptive Alt Text for image 1" },
+		{  src: img2.src, alt: "Descriptive Alt Text for image 2" },
+    {  src: img1.src, alt: "Descriptive Alt Text for image 1" },
+
+
+
+
+  ]}
+/>

@@ -1,6 +1,54 @@
 ---
 title: "Prace dla przemysłu"
+subtitle: "Specjalistyczne prace budowlano-serwisowe na wysokości "
+description: "Dzięki naszym usługom na wysokościach masz pewność, że Twój zakład będzie działał bezpiecznie i sprawnie. Wykorzystujemy nowoczesne techniki alpinistyczne, aby zapewnić skuteczne i bezpieczne wykonanie nawet najbardziej wymagających zadań.  "
 cover: https://placehold.co/600x400
 ---
- 
-Hey! My first blog post is here.
+import img1 from "@/img/uslugi/obsluga-nieruchomosci/1.jpg";
+import img2 from "@/img/uslugi/obsluga-nieruchomosci/2.jpg";
+import img3 from "@/img/uslugi/obsluga-nieruchomosci/3.jpg"; 
+import img4 from "@/img/uslugi/obsluga-nieruchomosci/4.jpg"; 
+import img5 from "@/img/uslugi/obsluga-nieruchomosci/5.jpg";
+import img6 from "@/img/uslugi/obsluga-nieruchomosci/6.jpg"; 
+import img7 from "@/img/uslugi/obsluga-nieruchomosci/7.jpg";
+import img8 from "@/img/uslugi/obsluga-nieruchomosci/8.jpg"; 
+import { Gallery8 } from "../../components/Gallery8.tsx";
+import { Header36 } from '../../components/HeaderService.tsx';
+import {Image} from 'astro:assets';
+
+<Header36 
+  heading={frontmatter.title}
+  subheading={frontmatter.subtitle}
+  description={frontmatter.description}>
+<Image src={img1} alt="A bird sitting on a nest of eggs."  height={900} />
+  </Header36>
+<div className="container px-[5%] py-16 md:py-24 lg:py-28 text-xl border-b-2 border-primary">
+	<div className="flex flex-col md:flex-row gap-x-20">
+  	<h2 className=" flex-1 text-5xl mb-3 min-w-64 block">Zadbaj o bezpieczeństwo i prawidłowe funkcjonowanie swojego zakładu przemysłowego dzięki naszym kompleksowym usługom na wysokościach:</h2>
+		<div className="flex-1">
+			<ul className="md:list-disc flex gap-y-5 flex-col">
+			<li>Czyszczenie i konserwacja elewacji oraz konstrukcji przemysłowych</li>
+			<li>Malowanie i zabezpieczanie antykorozyjne konstrukcji na wysokości</li>
+			<li>Montaż i demontaż urządzeń oraz systemów technicznych na wysokościach</li>
+			<li>Czyszczenie trudno dostępnych powierzchni i elementów instalacji</li>
+			</ul>
+	
+		</div>
+	</div>
+</div>
+
+<Gallery8 client:load
+  heading="Galeria Naszych Realizacji"
+  description="Zobacz nasze realizacje i poznaj jakość naszych usług."
+  images={[
+    {  src: img2.src, alt: "Descriptive Alt Text for image 2" },
+    {  src: img5.src, alt: "Descriptive Alt Text for image 5" },
+    {  src: img4.src, alt: "Descriptive Alt Text for image 4" },
+    {  src: img3.src, alt: "Descriptive Alt Text for image 3" },
+    {  src: img6.src, alt: "Descriptive Alt Text for image 6" },
+	{  src: img7.src, alt: "Descriptive Alt Text for image 6" },
+	{  src: img8.src, alt: "Descriptive Alt Text for image 6" },
+	{  src: img1.src, alt: "Descriptive Alt Text for image 1" },
+
+  ]}
+/>
