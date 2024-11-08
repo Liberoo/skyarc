@@ -1,35 +1,33 @@
 ---
 import '@/styles/globals.css';
 import Layout from '../layouts/Layout.astro';
-import { Header } from '../components/Header.tsx';
 import { About } from '../components/About.tsx';
 import { Services } from '../components/Services.tsx';
 import {Cta} from '../components/Cta.tsx';
 import {Gallery} from '../components/Gallery.tsx';
-import { RxChevronRight } from "react-icons/rx";
 import Image from 'astro/components/Image.astro';
 import logoSecondary from '../img/logo-secondary.png';
-import headerImage from '../img/uslugi/mycie-elewacji/1.jpg';
+import {Header1} from '../components/Header1.tsx';
+import myImage from '../img/uslugi/mycie-elewacji/1.webp';
+import {Sal} from '../components/Sal.tsx';
 ---
 
 <Layout title="Skyarc - Usługi Aplinistyczne">
     <main>
-        <Header
-          heading="Usługi Aplinistyczne"
-          description={`Nasza specjaliści zrealizują Twój projekt szybko, sprawnie i bezpiecznie na terenie Krakowa oraz małopolski. Zapoznaj się z zakresem naszych usług. Dzięki nowoczesnym technikom i doświadczeniu zapewniamy najwyższą jakość wykonania. Skontaktuj się z nami i umów na wycenę. `}
-          buttons={[
-            { text: "Kontakt", href: "/kontakt" },
-            { text: "Oferta", href: "/#oferta" }
-          ]}
-        >
-          <Image
-            src={headerImage}
-            alt="A description of my image."
-            width={1920}
-            class="object-cover h-full w-full"
-          />
-        </Header>
-        <About
+      <Header1
+      heading="Usługi Aplinistyczne"
+      description={`Nasza specjaliści zrealizują Twój projekt szybko, sprawnie i bezpiecznie na terenie Krakowa oraz małopolski. Zapoznaj się z zakresem naszych usług. Dzięki nowoczesnym technikom i doświadczeniu zapewniamy najwyższą jakość wykonania. Skontaktuj się z nami i umów na wycenę. `}
+      buttons={[
+        { text: "Kontakt", href: "/kontakt"},
+        { text: "Oferta", href: "/#uslugi"}
+      ]}
+      >
+      <Image class="w-full object-cover" src={myImage} alt="A description of my image." />
+  
+      </Header1>
+      <Sal client:load/>
+
+        <About client:load
         heading= "Skyarc"
         description={'Wybierając nasze usługi, zyskujesz pewność, że prace zostaną wykonane terminowo, precyzyjnie i z dbałością o każdy detal. Nasz zespół to doświadczeni fachowcy, którzy podchodzą do każdego zlecenia z pełnym zaangażowaniem.  Korzystamy z nowoczesnych narzędzi i sprawdzonych materiałów, co pozwala nam oferować usługi na najwyższym poziomie.'}
  />
@@ -37,7 +35,7 @@ import headerImage from '../img/uslugi/mycie-elewacji/1.jpg';
         <Cta>
           <Image
           src={logoSecondary}
-          alt="A description of my image."
+          alt="Logo Skyarc"
           width={100}
           />
         </Cta>

@@ -27,7 +27,7 @@ export const Contact24 = (props: Contact24Props) => {
     ...props,
   } as Props;
   return (
-    <section id="relume" className="pb-28">
+    <section id="dane" className="px-[5%] ">
       <div className="container">
 
         <div className="grid grid-cols-1 items-start justify-start gap-x-8 gap-y-12 md:grid-cols-2 md:gap-y-16 lg:grid-cols-4">
@@ -60,8 +60,8 @@ export const Contact24Defaults: Contact24Props = {
       description:
         "Napisz do nas wiadomość ",
       link: {
-        label: "hello@relume.io",
-        url: "#",
+        label: "skyarc.solution@gmail.com",
+        url: "mailto:skyarc.solution@gmail.com",
       },
     },
     {
@@ -70,19 +70,10 @@ export const Contact24Defaults: Contact24Props = {
       description:
         "Zadzwoń do nas",
       link: {
-        label: "+1 (555) 000-0000",
-        url: "#",
+        label: "+48  791161501",
+        url: "tel:+48791161501",
       },
     },
-    {
-      icon: <BiMap className="size-12" />,
-      title: "Biuro",
-      description:
-        "Odwiedź nas w naszym biurze",
-      link: {
-        label: "123 Sample St, Sydney NSW 2000 AU",
-        url: "#",
-      },
-    },
+
   ],
 };

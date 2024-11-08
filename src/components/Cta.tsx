@@ -14,7 +14,7 @@ export const Cta = (props: CtaProps) => {
     ...props,
   } as Props;
   return (
-    <section id="relume" className="bg-primary  text-white px-[5%] py-16 md:py-24 lg:py-28">
+    <section data-sal="fade" id="kontakt" className="bg-primary  text-white px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container max-w-lg text-center">
         <div className="mb-5 mx-auto flex justify-center">{props.children}</div>
         <h2 className="text-secondary rb-5 mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">{heading}</h2>

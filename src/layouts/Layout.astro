@@ -17,8 +17,13 @@ import Image from 'astro/components/Image.astro';
 <!doctype html>
 <html lang="en">
 	<head>
+		<meta property="og:image" content="https://akyarc.kamiljamroz.pl/logo.png" />
+		<meta name="keywords" content="słowo kluczowe 1, słowo kluczowe 2, słowo kluczowe 3">
+		<meta name="author" content="Skyarc - Usługi Alpinistyczne">
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content="Nasza specjaliści zrealizują Twój projekt szybko, sprawnie i bezpiecznie na terenie Krakowa oraz małopolski. Zapoznaj się z zakresem naszych usług. Dzięki nowoczesnym technikom i doświadczeniu zapewniamy najwyższą jakość wykonania. Skontaktuj się z nami i umów na wycenę." />
+		<meta name="keywords" content="usługi alpinistyczne, konserwacja dachów, montaż wysokościowy, mycie przeszkleń, naprawa elewacji, zabezpieczenia przed ptakami, odśnieżanie dachów, obsługa nieruchomości, Kraków, Małopolska">
+
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
@@ -28,15 +33,16 @@ import Image from 'astro/components/Image.astro';
 		<Navbar client:load>
 			<Image
 			src={logo}
-			alt="A description of my image."
+			alt="Logo Skyarc"
 			width={70}
+			loading='eager'
 		  />
 		</Navbar>
 		<slot />
 		<Footer>
 			<Image
 			src={logoWhite}
-			alt="A description of my image."
+			alt="Logo Skyarc"
 			width={100}
 		  />
 			</Footer>

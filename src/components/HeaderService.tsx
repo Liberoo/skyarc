@@ -21,7 +21,8 @@ export const Header36 = (props: Header36Props) => {
   } as Props;
   return (
     <section
-      id="relume"
+    data-sal="fade"
+      id="hero"
       className="grid grid-cols-1 items-center gap-y-16 pt-16 md:pt-24 lg:grid-cols-2 lg:pt-36 xl:pt-24"
     >
       <div className="mx-[5%] sm:max-w-md md:justify-self-start lg:ml-[5vw] lg:mr-20 lg:justify-self-end mt-20 lg:mt-0 ">

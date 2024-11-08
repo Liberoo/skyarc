@@ -7,6 +7,8 @@ import Layout from '../../layouts/Layout.astro';
  import logoSecondary from '../../img/logo-secondary.png';
  import {Cta} from '../../components/Cta.tsx';
  import {Services} from '../../components/Services.tsx';
+ import {Sal} from '../../components/Sal.tsx';
+ import '@/styles/globals.css';
 
 interface Props {
   post: CollectionEntry<'uslugi'>;
@@ -24,13 +26,13 @@ const { Content } = await post.render();
 ---
  
 <Layout title={post.data.title} >
-
+<Sal client:load/>
 <Content />
 
 	<Cta >
 		<Image
 		src={logoSecondary}
-		alt="A description of my image."
+		alt="Logo Skyarc"
 		width={100}
 		/>
 	  </Cta>

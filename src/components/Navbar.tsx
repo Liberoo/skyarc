@@ -174,7 +174,7 @@ export const NavbarDefaults: NavbarProps = {
     },
     { title: "Realizacje", url: "/#realizacje" },
     
-    { title: "+48 667897507", url: "tel:+48667897507" }, // Updated to tel: protocol
+    { title: "+48 791161501", url: "tel:+48 791161501" }, 
   ],
   buttons: [
     {

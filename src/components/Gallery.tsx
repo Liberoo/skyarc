@@ -10,32 +10,33 @@ import {
 } from "@relume_io/relume-ui";
 import type { CarouselApi } from "@relume_io/relume-ui";
 import clsx from "clsx";
+import Autoplay from 'embla-carousel-autoplay'
 
-import img1 from "@/img/uslugi/konserwacja-dachow/1.jpg";
-import img2 from "@/img/uslugi/konserwacja-dachow/2.jpg";
-import img3 from "@/img/uslugi/konserwacja-dachow/3.jpg"; 
-import img4 from "@/img/uslugi/konserwacja-dachow/4.jpg"; 
-import img5 from "@/img/uslugi/konserwacja-dachow/5.jpg";
-import img6 from "@/img/uslugi/konserwacja-dachow/6.jpg"; 
-import img7 from "@/img/uslugi/konserwacja-dachow/7.jpg"; 
-import img8 from "@/img/uslugi/mycie-elewacji/1.jpg";
-import img9 from "@/img/uslugi/mycie-elewacji/2.jpg";
-import img10 from "@/img/uslugi/mycie-elewacji/3.jpg"; 
-import img11 from "@/img/uslugi/mycie-elewacji/4.jpg"; 
-import img12 from "@/img/uslugi/mycie-elewacji/5.jpg";
-import img13 from "@/img/uslugi/mycie-elewacji/6.jpg"; 
-import img14 from "@/img/uslugi/obsluga-nieruchomosci/1.jpg";
-import img15 from "@/img/uslugi/obsluga-nieruchomosci/2.jpg";
-import img16 from "@/img/uslugi/obsluga-nieruchomosci/3.jpg"; 
-import img17 from "@/img/uslugi/obsluga-nieruchomosci/4.jpg"; 
-import img18 from "@/img/uslugi/obsluga-nieruchomosci/5.jpg";
-import img19 from "@/img/uslugi/obsluga-nieruchomosci/6.jpg"; 
-import img20 from "@/img/uslugi/obsluga-nieruchomosci/7.jpg";
-import img21 from "@/img/uslugi/obsluga-nieruchomosci/8.jpg"; 
-import img22 from "@/img/uslugi/odsniezanie/1.jpg";
-import img23 from "@/img/uslugi/odsniezanie/2.jpg"; 
-import img24 from "@/img/uslugi/siatki-i-zabezpieczenia-na-ptaki/1.jpg";
-import img25 from "@/img/uslugi/siatki-i-zabezpieczenia-na-ptaki/2.jpg"; 
+import img1 from "@/img/uslugi/konserwacja-dachow/1.webp";
+import img2 from "@/img/uslugi/konserwacja-dachow/2.webp";
+import img3 from "@/img/uslugi/konserwacja-dachow/3.webp"; 
+import img4 from "@/img/uslugi/konserwacja-dachow/4.webp"; 
+import img5 from "@/img/uslugi/konserwacja-dachow/5.webp";
+import img6 from "@/img/uslugi/konserwacja-dachow/6.webp"; 
+import img7 from "@/img/uslugi/konserwacja-dachow/7.webp"; 
+import img8 from "@/img/uslugi/mycie-elewacji/1.webp";
+import img9 from "@/img/uslugi/mycie-elewacji/2.webp";
+import img10 from "@/img/uslugi/mycie-elewacji/3.webp"; 
+import img11 from "@/img/uslugi/mycie-elewacji/4.webp"; 
+import img12 from "@/img/uslugi/mycie-elewacji/5.webp";
+import img13 from "@/img/uslugi/mycie-elewacji/6.webp"; 
+import img14 from "@/img/uslugi/obsluga-nieruchomosci/1.webp";
+import img15 from "@/img/uslugi/obsluga-nieruchomosci/2.webp";
+import img16 from "@/img/uslugi/obsluga-nieruchomosci/3.webp"; 
+import img17 from "@/img/uslugi/obsluga-nieruchomosci/4.webp"; 
+import img18 from "@/img/uslugi/obsluga-nieruchomosci/5.webp";
+import img19 from "@/img/uslugi/obsluga-nieruchomosci/6.webp"; 
+import img20 from "@/img/uslugi/obsluga-nieruchomosci/7.webp";
+import img21 from "@/img/uslugi/obsluga-nieruchomosci/8.webp"; 
+import img22 from "@/img/uslugi/odsniezanie/1.webp";
+import img23 from "@/img/uslugi/odsniezanie/2.webp"; 
+import img24 from "@/img/uslugi/siatki-i-zabezpieczenia-na-ptaki/1.webp";
+import img25 from "@/img/uslugi/siatki-i-zabezpieczenia-na-ptaki/2.webp"; 
 type ImageProps = {
   src: string;
   alt?: string;
@@ -69,7 +70,7 @@ export const Gallery = (props: GalleryProps) => {
   }, [api]);
 
   return (
-    <section id="realizacje" className="overflow-hidden px-[5%] py-16 md:py-24 lg:py-28">
+    <section data-sal="fade" id="realizacje" className="overflow-hidden px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
         <div className="rb-12 mb-12 md:mb-18 lg:mb-20">
           <h2 className="rb-5 mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
@@ -84,6 +85,9 @@ export const Gallery = (props: GalleryProps) => {
             loop: true,
             align: "start",
           }}
+          plugins={
+            [Autoplay()]
+          }
         >
           <CarouselContent className="ml-0">
             {images.map((image, index) => (
@@ -126,80 +130,80 @@ export const GalleryDefaults: GalleryProps = {
   images: [
     {
       src: img1.src,
-      alt: "Relume placeholder image 1",
+      alt: "Zdjęcie realizacji usługi skyarc",
     },
     {
       src: img2.src,
-      alt: "Relume placeholder image 1",
+      alt: "Zdjęcie realizacji usługi skyarc",
     },   {
       src: img3.src,
-      alt: "Relume placeholder image 1",
+      alt: "Zdjęcie realizacji usługi skyarc",
     },   {
       src: img4.src,
-      alt: "Relume placeholder image 1",
+      alt: "Zdjęcie realizacji usługi skyarc",
     },   {
       src: img5.src,
-      alt: "Relume placeholder image 1",
+      alt: "Zdjęcie realizacji usługi skyarc",
     },   {
       src: img6.src,
-      alt: "Relume placeholder image 1",
+      alt: "Zdjęcie realizacji usługi skyarc",
     },   {
       src: img7.src,
-      alt: "Relume placeholder image 1",
+      alt: "Zdjęcie realizacji usługi skyarc",
     },   {
       src: img8.src,
-      alt: "Relume placeholder image 1",
+      alt: "Zdjęcie realizacji usługi skyarc",
     },   {
       src: img9.src,
-      alt: "Relume placeholder image 1",
+      alt: "Zdjęcie realizacji usługi skyarc",
     },   {
       src: img10.src,
-      alt: "Relume placeholder image 1",
+      alt: "Zdjęcie realizacji usługi skyarc",
     },   {
       src: img11.src,
-      alt: "Relume placeholder image 1",
+      alt: "Zdjęcie realizacji usługi skyarc",
     },   {
       src: img12.src,
-      alt: "Relume placeholder image 1",
+      alt: "Zdjęcie realizacji usługi skyarc",
     },   {
       src: img13.src,
-      alt: "Relume placeholder image 1",
+      alt: "Zdjęcie realizacji usługi skyarc",
     },   {
       src: img14.src,
-      alt: "Relume placeholder image 1",
+      alt: "Zdjęcie realizacji usługi skyarc",
     },   {
       src: img15.src,
-      alt: "Relume placeholder image 1",
+      alt: "Zdjęcie realizacji usługi skyarc",
     },   {
       src: img16.src,
-      alt: "Relume placeholder image 1",
+      alt: "Zdjęcie realizacji usługi skyarc",
     },   {
       src: img17.src,
-      alt: "Relume placeholder image 1",
+      alt: "Zdjęcie realizacji usługi skyarc",
     },   {
       src: img18.src,
-      alt: "Relume placeholder image 1",
+      alt: "Zdjęcie realizacji usługi skyarc",
     },   {
       src: img19.src,
-      alt: "Relume placeholder image 1",
+      alt: "Zdjęcie realizacji usługi skyarc",
     },   {
       src: img20.src,
-      alt: "Relume placeholder image 1",
+      alt: "Zdjęcie realizacji usługi skyarc",
     },   {
       src: img21.src,
-      alt: "Relume placeholder image 1",
+      alt: "Zdjęcie realizacji usługi skyarc",
     },   {
       src: img22.src,
-      alt: "Relume placeholder image 1",
+      alt: "Zdjęcie realizacji usługi skyarc",
     },   {
       src: img23.src,
-      alt: "Relume placeholder image 1",
+      alt: "Zdjęcie realizacji usługi skyarc",
     },   {
       src: img24.src,
-      alt: "Relume placeholder image 1",
+      alt: "Zdjęcie realizacji usługi skyarc",
     },   {
       src: img25.src,
-      alt: "Relume placeholder image 1",
+      alt: "Zdjęcie realizacji usługi skyarc",
     },
   ],
 };

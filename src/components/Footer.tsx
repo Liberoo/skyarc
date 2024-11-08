@@ -50,7 +50,7 @@ export const Footer = (props: FooterProps) => {
     <footer className="px-[5%] py-12 md:py-18 lg:py-20 bg-primary text-white">
       <div className="container">
         <div className="grid grid-cols-1 items-center justify-center justify-items-center gap-x-[4vw] gap-y-12 pb-12 md:pb-18 lg:grid-cols-[0.25fr_1fr_0.25fr] lg:justify-between lg:gap-y-4 lg:pb-20">
-          <a href="#" className="lg:justify-self-start">
+          <a href="/" className="lg:justify-self-start">
             {props.children}
           </a>
           {columnLinks.map((column, index) => (
@@ -67,7 +67,7 @@ export const Footer = (props: FooterProps) => {
           ))}
           <div className="flex items-start justify-start justify-items-center gap-x-3 lg:justify-self-end">
             {socialMediaLinks.map((link, index) => (
-              <a className="hover:text-secondary transition-colors duration-300" key={index} href={link.url}>
+              <a className="hover:text-secondary transition-colors duration-300" aria-label="User Profile" key={index} href={link.url}  target="_blank">
                 {link.icon}
               </a>
             ))}
@@ -79,7 +79,7 @@ export const Footer = (props: FooterProps) => {
           <ul className="grid grid-flow-row grid-cols-[max-content] items-center justify-center justify-items-center gap-x-0 gap-y-4 text-sm md:grid-flow-col md:gap-x-6 md:gap-y-0">
             {footerLinks.map((link, index) => (
               <li key={index} className="underline decoration-black underline-offset-1 ">
-                <a href={link.url}>{link.title}</a>
+                <a href={link.url} target="_blank">{link.title} </a>
               </li>
             ))}
           </ul>
@@ -91,7 +91,7 @@ export const Footer = (props: FooterProps) => {
 
 export const FooterDefaults: FooterProps = {
   logo: {
-    url: "#",
+    url: "/",
     src: "https://d22po4pjz3o32e.cloudfront.net/logo-image.svg",
     alt: "Logo image",
   },
@@ -106,15 +106,15 @@ export const FooterDefaults: FooterProps = {
     },
   ],
   socialMediaLinks: [
-    { url: "#", icon: <BiLogoFacebookCircle className="size-6" /> },
-    { url: "#", icon: <BiLogoInstagram className="size-6" /> },
-    { url: "#", icon: <FaXTwitter className="size-6 p-0.5" /> },
-    { url: "#", icon: <BiLogoLinkedinSquare className="size-6" /> },
-    { url: "#", icon: <BiLogoYoutube className="size-6" /> },
+    { url: "https://www.facebook.com/Skyarcuslugiwysokosciowe", icon: <BiLogoFacebookCircle className="size-6" /> },
+    // { url: "#", icon: <BiLogoInstagram className="size-6" /> },
+    // { url: "#", icon: <FaXTwitter className="size-6 p-0.5" /> },
+    // { url: "#", icon: <BiLogoLinkedinSquare className="size-6" /> },
+    // { url: "#", icon: <BiLogoYoutube className="size-6" /> },
   ],
   footerText: "© 2024 SkyArc. Wszystkie Prawa Zastrzeżone.",
   footerLinks: [
-    { title: "Polityka Prywatności", url: "#" },
+    { title: "Polityka Prywatności", url: "/polityka-prywatnosci" },
 
   ],
 };

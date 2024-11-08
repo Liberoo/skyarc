@@ -20,7 +20,7 @@ export const Gallery8 = (props: Gallery8Props) => {
     ...props,
   } as Props;
   return (
-    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+    <section data-sal="fade" id="galeria" className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
         <div className="rb-12 mb-12 text-center md:mb-18 lg:mb-20">
           <h2 className="rb-5 mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
@@ -60,22 +60,22 @@ export const Gallery8Defaults: Gallery8Props = {
     {
 
       src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
-      alt: "Relume placeholder image 1",
+      alt: "Zdjęcie realizacji usługi skyarc",
     },
     {
 
       src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
-      alt: "Relume placeholder image 2",
+      alt: "Zdjęcie realizacji usługi skyarc",
     },
     {
 
       src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
-      alt: "Relume placeholder image 3",
+      alt: "Zdjęcie realizacji usługi skyarc",
     },
     {
 
       src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
-      alt: "Relume placeholder image 4",
+      alt: "Zdjęcie realizacji usługi skyarc",
     },
   ],
 };

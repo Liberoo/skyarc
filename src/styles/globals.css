@@ -1,7 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+:root {
+    --sal-duration: 1s; 
+  }
 .nav-link::after {
     content: '';
     position: absolute;
@@ -19,3 +21,12 @@
 .nav-link:hover::after {
     transform: scaleX(1);
 }
+.animate-spin{ animation: spin 3s linear infinite;}	
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
