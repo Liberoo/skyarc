@@ -111,6 +111,7 @@ export const Gallery = (props: GalleryProps) => {
                     "bg-black": current === index + 1,
                     "bg-neutral-light": current !== index + 1,
                   })}
+                  aria-label={`Toggle submenu for Gallery`} 
                 />
               ))}
             </div>

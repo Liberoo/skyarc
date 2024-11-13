@@ -1,13 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useMediaQuery } from "@relume_io/relume-ui";
 import type { ButtonProps } from "@relume_io/relume-ui";
 import { AnimatePresence, motion } from "framer-motion";
 import { RxChevronDown } from "react-icons/rx";
 import { TiPhone } from "react-icons/ti";
 import Link from "./Link";
-import logo from "../img/logo2.webp";
+import logo from "../img/logo.webp";
 
 type ImageProps = {
   url?: string;
@@ -22,7 +22,6 @@ type NavLink = {
 };
 
 type Props = {
- 
   navLinks: NavLink[];
 };
 
@@ -37,6 +36,33 @@ export const Navbar = (props: NavbarProps) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const isMobile = useMediaQuery("(max-width: 991px)");
 
+  useEffect(() => {
+    const calculateHeaderHeight = () => {
+      const header = document.querySelector('.main-header');
+
+      const runCalculation = () => {
+        if (header) {
+          const headerHeight = header.offsetHeight;
+          document.documentElement.style.setProperty('--header-height', `${headerHeight}px`);
+          console.log(headerHeight);
+        }
+      };
+
+      window.addEventListener('resize', runCalculation);
+      runCalculation();
+
+      return () => {
+        window.removeEventListener('resize', runCalculation);
+      };
+    };
+
+    document.addEventListener('DOMContentLoaded', calculateHeaderHeight);
+
+    return () => {
+      document.removeEventListener('DOMContentLoaded', calculateHeaderHeight);
+    };
+  }, []);
+
   const handleLinkClick = () => {
     if (isMobile) {
       setIsMobileMenuOpen(false);
@@ -49,12 +75,13 @@ export const Navbar = (props: NavbarProps) => {
         <div className="flex min-h-16 items-center justify-between px-[5%] md:min-h-18 lg:min-h-full lg:px-0">
           <a href="/">
             <div className="py-2">
-              <img src={logo.src} alt="Skyarc logo" width={70} height={84} loading="eager"/>
+              <img src={logo.src} alt="Skyarc logo" width={70} height={84} loading="eager" />
             </div>
           </a>
           <button
             className="-mr-2 flex size-12 flex-col items-center justify-center lg:hidden"
             onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+            aria-label="Toggle mobile menu"
           >
             <motion.span
               className="my-[3px] h-0.5 w-6 bg-black"
@@ -125,6 +152,7 @@ const SubMenu = ({ navLink, isMobile, handleLinkClick }: { navLink: NavLink; isM
       <button
         className="flex w-full items-center justify-between gap-2 py-3 text-left text-md lg:flex-none lg:justify-start lg:px-4 lg:py-2 lg:text-base"
         onClick={() => setIsDropdownOpen((prev) => !prev)}
+        aria-label="Toggle mobile menu"
       >
         <span>{navLink.title}</span>
         <motion.span
@@ -189,8 +217,7 @@ export const NavbarDefaults: NavbarProps = {
       url: "/#uslugi",
     },
     { title: "Realizacje", url: "/#realizacje" },
-    
-    { title: "+48 791161501", url: "tel:+48 791161501" }, 
+    { title: "+48 791161501", url: "tel:+48 791161501" },
   ],
   buttons: [
     {
@@ -241,9 +268,9 @@ const bottomLineVariants = {
     rotate: 45,
     transition: { delay: 0.2 },
   },
-  closed: {
-    translateY: 0,
+  closed: {     translateY: 0,
     rotate: 0,
     transition: { duration: 0.2 },
   },
 };
+
