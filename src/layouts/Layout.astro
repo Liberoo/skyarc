@@ -46,6 +46,26 @@ import Image from 'astro/components/Image.astro';
 			width={100}
 		  />
 			</Footer>
+			<script is:inline>
+				const calculateHeaderHeight = () => {
+	const header = document.querySelector('.main-header');
+
+	const runCalculation = () => {
+		if (header) {
+			const headerHeight = header.offsetHeight;
+			document.documentElement.style.setProperty('--header-height', `${headerHeight}px`);
+		}
+	};
+
+	window.addEventListener('resize', runCalculation);
+	runCalculation();
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+	
+	calculateHeaderHeight();
+});
+			</script>
 	</body>
 </html>
 <style is:global>

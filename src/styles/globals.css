@@ -4,6 +4,11 @@
 :root {
     --sal-duration: 1s; 
   }
+
+  html{
+    scroll-padding-top: var(--header-height);
+
+  }
 .nav-link::after {
     content: '';
     position: absolute;

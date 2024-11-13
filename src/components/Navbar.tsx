@@ -29,7 +29,7 @@ type Props = {
 export type NavbarProps = React.ComponentPropsWithoutRef<"section"> & Partial<Props>;
 
 export const Navbar = (props: NavbarProps) => {
-  const {  navLinks, buttons } = {
+  const { navLinks, buttons } = {
     ...NavbarDefaults,
     ...props,
   } as Props;
@@ -37,8 +37,14 @@ export const Navbar = (props: NavbarProps) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const isMobile = useMediaQuery("(max-width: 991px)");
 
+  const handleLinkClick = () => {
+    if (isMobile) {
+      setIsMobileMenuOpen(false);
+    }
+  };
+
   return (
-    <nav className="flex w-full fixed z-50 items-center border-b border-border-primary bg-background-primary lg:min-h-18 lg:px-[5%]">
+    <nav className="main-header flex w-full fixed z-50 items-center border-b border-border-primary bg-background-primary lg:min-h-18 lg:px-[5%]">
       <div className="size-full lg:flex lg:items-center lg:justify-between">
         <div className="flex min-h-16 items-center justify-between px-[5%] md:min-h-18 lg:min-h-full lg:px-0">
           <a href="/">
@@ -85,16 +91,22 @@ export const Navbar = (props: NavbarProps) => {
           {navLinks.map((navLink, index) => (
             <div key={index} className="first:pt-4 lg:first:pt-0">
               {navLink.subMenuLinks && navLink.subMenuLinks.length > 0 ? (
-                <SubMenu navLink={navLink} isMobile={isMobile} />
+                <SubMenu navLink={navLink} isMobile={isMobile} handleLinkClick={handleLinkClick} />
               ) : (
-                <a href={navLink.url} className="block py-3  text-md lg:px-4 lg:py-2 lg:text-base relative nav-link">
+                <a
+                  href={navLink.url}
+                  className="block py-3 text-md lg:px-4 lg:py-2 lg:text-base relative nav-link"
+                  onClick={handleLinkClick}
+                >
                   {navLink.title}
                 </a>
               )}
             </div>
           ))}
           <div className="mt-6 flex flex-col items-center gap-4 lg:ml-4 lg:mt-0 lg:flex-row">
-            <Link href="/kontakt" variant="primary">Kontakt</Link>
+            <Link href="/kontakt" variant="primary" onClick={handleLinkClick}>
+              Kontakt
+            </Link>
           </div>
         </motion.div>
       </div>
@@ -102,7 +114,7 @@ export const Navbar = (props: NavbarProps) => {
   );
 };
 
-const SubMenu = ({ navLink, isMobile }: { navLink: NavLink; isMobile: boolean }) => {
+const SubMenu = ({ navLink, isMobile, handleLinkClick }: { navLink: NavLink; isMobile: boolean; handleLinkClick: () => void }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   return (
@@ -152,8 +164,9 @@ const SubMenu = ({ navLink, isMobile }: { navLink: NavLink; isMobile: boolean })
                 key={index}
                 href={subNavLink.url}
                 className="block py-3 pl-[5%] text-md lg:px-4 lg:py-2 lg:text-base"
+                onClick={handleLinkClick}
               >
-                 {subNavLink.title}
+                {subNavLink.title}
               </a>
             ))}
           </motion.nav>
