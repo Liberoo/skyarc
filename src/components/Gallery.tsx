@@ -96,6 +96,7 @@ export const Gallery = (props: GalleryProps) => {
                   src={image.src}
                   alt={image.alt}
                   className="aspect-square size-full object-cover"
+                  loading="lazy"
                 />
               </CarouselItem>
             ))}

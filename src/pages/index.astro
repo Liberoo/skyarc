@@ -22,7 +22,8 @@ import {Sal} from '../components/Sal.tsx';
         { text: "Oferta", href: "/#uslugi"}
       ]}
       >
-      <Image class="w-full object-cover" src={myImage} alt="A description of my image." />
+      <Image class="w-full object-cover"   sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${myImage.width}px`}
+       src={myImage} alt="A description of my image." />
   
       </Header1>
       <Sal client:load/>

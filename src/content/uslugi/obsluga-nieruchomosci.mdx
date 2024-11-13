@@ -21,7 +21,8 @@ import {Image} from 'astro:assets';
   heading={frontmatter.title}
   subheading={frontmatter.subtitle}
   description={frontmatter.description}>
-<Image src={img1} alt="Zdjęcie realizacji usługi obsługi nieruchomości firmy Skyarc"  height={900} loading="eager" />
+<Image src={img1} alt="Zdjęcie realizacji usługi obsługi nieruchomości firmy Skyarc"   sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${img1.width}px`}
+  height={900} loading="eager" />
   </Header36>
 <div data-sal="fade" className="container px-[5%] py-16 md:py-24 lg:py-28 text-xl border-b-2 border-primary">
 	<div className="flex flex-col md:flex-row gap-x-20">

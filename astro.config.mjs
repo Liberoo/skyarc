@@ -6,5 +6,8 @@ import mdx from '@astrojs/mdx';
 
 
 export default defineConfig({
-  integrations: [tailwind(), react(), mdx()]
+  integrations: [tailwind(), react(), mdx()],
+  server: {
+    host: true,
+  },
 });

@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { RxChevronDown } from "react-icons/rx";
 import { TiPhone } from "react-icons/ti";
 import Link from "./Link";
+import logo from "../img/logo2.webp";
 
 type ImageProps = {
   url?: string;
@@ -21,14 +22,14 @@ type NavLink = {
 };
 
 type Props = {
-  children: React.ReactNode;
+ 
   navLinks: NavLink[];
 };
 
 export type NavbarProps = React.ComponentPropsWithoutRef<"section"> & Partial<Props>;
 
 export const Navbar = (props: NavbarProps) => {
-  const { children, navLinks, buttons } = {
+  const {  navLinks, buttons } = {
     ...NavbarDefaults,
     ...props,
   } as Props;
@@ -41,7 +42,9 @@ export const Navbar = (props: NavbarProps) => {
       <div className="size-full lg:flex lg:items-center lg:justify-between">
         <div className="flex min-h-16 items-center justify-between px-[5%] md:min-h-18 lg:min-h-full lg:px-0">
           <a href="/">
-            <div className="py-2">{children}</div>
+            <div className="py-2">
+              <img src={logo.src} alt="Skyarc logo" width={70} height={84} loading="eager"/>
+            </div>
           </a>
           <button
             className="-mr-2 flex size-12 flex-col items-center justify-center lg:hidden"
