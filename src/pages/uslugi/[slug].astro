@@ -34,6 +34,8 @@ const { Content } = await post.render();
 		src={logoSecondary}
 		alt="Logo Skyarc"
 		width={100}
+		sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${logoSecondary.width}px`}
+
 		/>
 	  </Cta>
 <Services heading="Sprawdź inne usługi"/>

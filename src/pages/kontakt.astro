@@ -10,7 +10,7 @@ import Image from 'astro/components/Image.astro';
 <Layout title="Skyarc - Kontakt">
     <main class="md:ly-20 py-28">
        <Contact9 client:load>
-        <Image loading="eager" class='size-full object-cover object-top' src={climber} alt="Pracownik wspinaczkowy wykonujący usługę" />
+        <Image loading="eager" class='size-full object-cover object-top' src={climber} sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${climber.width}px`} alt="Pracownik wspinaczkowy wykonujący usługę" />
         </Contact9>
 	   <Contact24/
     </main>
