@@ -33,7 +33,7 @@ export const Services = (props: ServicesProps) => {
   } as Props;
 
   return (
-    <section data-sal="fade" id="uslugi" className="px-[5%] py-16 md:py-24 lg:py-28">
+    <section data-sal="fade" id="uslugi" className="px-[5%] pt-[2%] py-16 md:py-24 lg:py-10">
       <div className="container">
         <div className="mx-auto mb-12 w-full max-w-lg text-center md:mb-18 lg:mb-20">
           <h2 className="text-primary mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">{heading}</h2>

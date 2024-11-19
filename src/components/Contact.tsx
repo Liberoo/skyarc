@@ -42,10 +42,10 @@ export const Contact9 = (props: Contact9Props) => {
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-
+  
     let hasError = false;
     const newErrors = { name: '', email: '', message: '', acceptTerms: '' };
-
+  
     if (!name) {
       newErrors.name = 'Pole musi być uzupełnione';
       hasError = true;
@@ -62,33 +62,33 @@ export const Contact9 = (props: Contact9Props) => {
       newErrors.acceptTerms = 'Musisz zaakceptować politykę prywatności';
       hasError = true;
     }
-
+  
     setErrors(newErrors);
-
+  
     if (!hasError) {
       setIsSubmitting(true); // Disable the button when submitting
       
       try {
+        // Using FormData to include all inputs, including hidden ones
+        const formData = new FormData();
+        formData.append('_subject', 'Nowa wiadomość ze strony skyarc.pl');
+        formData.append('name', name);
+        formData.append('email', email);
+        formData.append('message', message);
+        formData.append('acceptTerms', acceptTerms.toString());
+  
         const response = await fetch("https://formsubmit.co/ajax/f1089116914fb8e36f40be920748c405", {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            name: name,
-            email: email,
-            message: message,
-            acceptTerms: acceptTerms
-          }),
+          body: formData,
         });
-
+  
         if (response.ok) {
           const result = await response.json();
           console.log("Form submitted successfully:", result);
-
+  
           // Show a thank-you message
           setFormSubmitted(true);
-
+  
           // Optionally reset form fields here
           setName("");
           setEmail("");

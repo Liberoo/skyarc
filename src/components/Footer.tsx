@@ -47,9 +47,9 @@ export const Footer = (props: FooterProps) => {
     ...props,
   } as Props;
   return (
-    <footer className="px-[5%] py-12 md:py-18 lg:py-20 bg-primary text-white">
+    <footer className="px-[5%] py-5  bg-primary text-white">
       <div className="container">
-        <div className="grid grid-cols-1 items-center justify-center justify-items-center gap-x-[4vw] gap-y-12 pb-12 md:pb-18 lg:grid-cols-[0.25fr_1fr_0.25fr] lg:justify-between lg:gap-y-4 lg:pb-20">
+        <div className="grid grid-cols-1 items-center justify-center justify-items-center gap-x-[4vw] gap-y-12 pb-5  lg:grid-cols-[0.25fr_1fr_0.25fr] lg:justify-between lg:gap-y-4">
           <a href="/" className="lg:justify-self-start">
             {props.children}
           </a>

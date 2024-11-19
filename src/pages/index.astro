@@ -9,6 +9,7 @@ import Image from 'astro/components/Image.astro';
 import logoSecondary from '../img/logo-secondary.png';
 import {Header1} from '../components/Header1.tsx';
 import myImage from '../img/uslugi/mycie-elewacji/1.webp';
+import aboutImage from '../img/about.webp';
 import {Sal} from '../components/Sal.tsx';
 ---
 
@@ -16,7 +17,7 @@ import {Sal} from '../components/Sal.tsx';
     <main>
       <Header1
       heading="Usługi Aplinistyczne"
-      description={`Nasza specjaliści zrealizują Twój projekt szybko, sprawnie i bezpiecznie na terenie Krakowa oraz małopolski. Zapoznaj się z zakresem naszych usług. Dzięki nowoczesnym technikom i doświadczeniu zapewniamy najwyższą jakość wykonania. Skontaktuj się z nami i umów na wycenę. `}
+      description={`Nasi specjaliści zrealizują Twój projekt szybko, sprawnie i bezpiecznie na terenie Krakowa oraz małopolski. Zapoznaj się z zakresem naszych usług. Dzięki nowoczesnym technikom i doświadczeniu zapewniamy najwyższą jakość wykonania. Skontaktuj się z nami i umów na wycenę. `}
       buttons={[
         { text: "Kontakt", href: "/kontakt"},
         { text: "Oferta", href: "/#uslugi"}
@@ -31,7 +32,10 @@ import {Sal} from '../components/Sal.tsx';
         <About client:load
         heading= "Skyarc"
         description={'Wybierając nasze usługi, zyskujesz pewność, że prace zostaną wykonane terminowo, precyzyjnie i z dbałością o każdy detal. Nasz zespół to doświadczeni fachowcy, którzy podchodzą do każdego zlecenia z pełnym zaangażowaniem.  Korzystamy z nowoczesnych narzędzi i sprawdzonych materiałów, co pozwala nam oferować usługi na najwyższym poziomie.'}
- />
+ >
+ <Image class="w-full object-cover"   sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${aboutImage.width}px`}
+ src={aboutImage} alt="A description of my image." />
+    </About>
         <Services/>
         <Cta>
           <Image
