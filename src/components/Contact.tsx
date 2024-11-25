@@ -77,7 +77,7 @@ export const Contact9 = (props: Contact9Props) => {
         formData.append('message', message);
         formData.append('acceptTerms', acceptTerms.toString());
   
-        const response = await fetch("https://formsubmit.co/ajax/f1089116914fb8e36f40be920748c405", {
+        const response = await fetch("https://formsubmit.co/ajax/24db78992dcddae8d14fc4ac0233d1f7", {
           method: 'POST',
           body: formData,
         });
